@@ -1,33 +1,11 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
 <div align="center">
 
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Microverse Education project by Kumilachew Getie</b></h3>
 
 </div>
 
@@ -62,13 +40,10 @@ After you're finished please remove all the comments and instructions!
 > Project descriptions
 
 **Rails Blog App** shows the list of posts and empower readers to interact with them by adding comments and liking posts. It is an App created with Ruby on Rails and Postgresql, that allows all users to post, like comments and check previous posts.
-![Screen Shot 2022-11-22 at 14 49 33](https://user-images.githubusercontent.com/99816838/203434364-919eeb81-a0c9-4781-b37e-f62766996a9e.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Ruby on Rails / Postgresql
 
 <details>
   <summary>Client</summary>
@@ -98,9 +73,9 @@ After you're finished please remove all the comments and instructions!
 
 > Key Features
 
-- **[Add Comments]**
-- **[Add Posts]**
-- **[Like Posts]**
+- **Add Comments**
+- **Add Posts**
+- **Like Posts**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,17 +83,14 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo Soon <a name="live-demo"></a>
 
-> Comming Soon!!!.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link]()
+  > Comming Soon!!!.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -141,8 +113,6 @@ Clone this repository to your desired folder:
   git clone git@github.com/Kumilachew-g/rails-blog-app.git
 ```
 
--
-
 ### Install
 
 Install this project with:
@@ -152,8 +122,6 @@ Install this project with:
   bundle install
 ```
 
--
-
 ### Usage
 
 To run the project, execute the following command:
@@ -161,8 +129,6 @@ To run the project, execute the following command:
 ```sh
   rails server
 ```
-
--
 
 ### Run tests
 
@@ -194,7 +160,7 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+<!-- > Mention all of the collaborators of this project. -->
 
 👤 **Kumilachew Getie**
 
@@ -210,9 +176,9 @@ Example:
 
 > 3 Key features I will add to the project.
 
-- [ ] **[Validations]**
-- [ ] **[Testing]**
-- [ ] **[Deploy]**
+- [ ] **Validations**
+- [ ] **Testing**
+- [ ] **Deploy**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -252,13 +218,13 @@ I would like to thank...
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- **Can I use without internet?**
 
-  - [Answer_1]
+  - No You can't.
 
-- **[Question_2]**
+- **Can I deploy it?**
 
-  - [Answer_2]
+  - No You can't.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
