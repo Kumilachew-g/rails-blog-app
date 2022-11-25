@@ -1,26 +1,31 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'Kumie', photo: 'https://unsplash.com/photos/r-QpUNyC5Bc', bio: 'Student from Microverse.', posts_counter: 0) }
-
-  before { subject.save }
-
-  it 'name should be present' do
-    subject.name = nil
-    expect(subject).to_not be_valid
-  end
-
-  it 'name should be valid' do
-   expect(subject).to be_valid
- end
-
-  it 'posts_counter should be greater_than_or_equal zero' do 
-   subject.posts_counter = -1
-   expect(subject).to_not be_valid
- end
-
- it 'posts_counter be valid' do 
-   subject.posts_counter = 1
-   expect(subject).to be_valid
- end
+   describe 'User model validations' do
+      subject do
+        User.new
+      end
+  
+      before {subject.save}
+  
+      it "name presence" do
+        subject.name = nil
+        expect(subject).to_not be_valid
+      end
+  
+      it "bio presence" do
+        subject.bio = nil
+        expect(subject).to_not be_valid
+      end
+  
+      it "posts counter should be integer " do
+        subject.posts_counter = 1.7
+      expect(subject).to_not be_valid
+      end
+  
+      it "posts counter should be greater or equal to 0 " do
+        subject.posts_counter = -1
+      expect(subject).to_not be_valid
+      end
+    end
 end
