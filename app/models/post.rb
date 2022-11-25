@@ -6,6 +6,8 @@ class Post < ApplicationRecord
 
   after_save :post_counter
 
+  validates :title, presence: true,  length: { maximum: 250 }
+
   private
 
   def post_counter
