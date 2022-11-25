@@ -6,12 +6,12 @@ RSpec.describe Like, type: :model do
       post: Post.new(
         user: User.new(
           name: 'Haddis', photo: 'https://unsplash.com/photos/-rwqO6Jvo_M',
-          bio: 'Teacher at AASTU.',
+          bio: 'Teacher from AASTU.',
           posts_counter: 0
         ), title: 'Java', text: 'This is my first post',
         likes_counter: 0, comments_counter: 0
       ),
-      user: User.new(name: 'Haddis', photo: 'https://unsplash.com/photos/-rwqO6Jvo_M', bio: 'Teacher at AASTU.',
+      user: User.new(name: 'Haddis', photo: 'https://unsplash.com/photos/-rwqO6Jvo_M', bio: 'Teacher from AASTU.',
                      posts_counter: 0)
     )
   end
