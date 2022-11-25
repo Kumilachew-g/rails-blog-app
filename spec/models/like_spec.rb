@@ -1,18 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  user1 = User.new
-  post1 = Post.new(title: 'post_test', text: 'this is post test', author: user1)
   subject do
-    Like.new
+    Like.new(
+      post: Post.new(
+        user: User.new(
+          name: 'Haddis', photo: 'https://unsplash.com/photos/-rwqO6Jvo_M',
+          bio: 'Teacher at AASTU.',
+          posts_counter: 0
+        ), title: 'Java', text: 'This is my first post',
+        likes_counter: 0, comments_counter: 0
+      ),
+      user: User.new(name: 'Haddis', photo: 'https://unsplash.com/photos/-rwqO6Jvo_M', bio: 'Teacher at AASTU.',
+                     posts_counter: 0)
+    )
   end
 
   before { subject.save }
-  describe 'likes model method' do
-    it 'should update likes count' do
-      post1.likes_counter = 2
-      subject.post = post1
-      expect(subject.likes_counter.likes_counter).to eq 3
-    end
+
+  it 'comments_counter should return a right result when calling it with after_save' do
+    expect(subject.post.likes_counter).to eq(1)
   end
 end
