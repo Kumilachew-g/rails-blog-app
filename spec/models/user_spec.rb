@@ -27,13 +27,5 @@ RSpec.describe User, type: :model do
       subject.posts_counter = -1
       expect(subject).to_not be_valid
     end
-
-    describe 'User model method' do
-      before { 10.times { |_post| Post.create(author: subject) } }
-
-      it 'rencent posts should be 3' do
-        expect(subject.recent_posts).to eq(subject.posts.last(3))
-      end
-    end
   end
 end
