@@ -23,5 +23,9 @@ RSpec.describe 'Users', type: :request do
         it "Check is response status correct" do
           expect(response).to have_http_status(:ok)
         end
+
+        it 'Check is correct template rendered' do
+          expect(response).to render_template(:show)
+        end
       end
 end
