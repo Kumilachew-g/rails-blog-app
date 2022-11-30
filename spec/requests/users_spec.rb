@@ -16,4 +16,12 @@ RSpec.describe 'Users', type: :request do
             expect(response.body).to include('INDEX')
           end
       end
+
+      describe "GET /show" do
+        before(:example) { get '/users/:user_id' } 
+    
+        it "Check is response status correct" do
+          expect(response).to have_http_status(:ok)
+        end
+      end
 end
