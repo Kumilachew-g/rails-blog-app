@@ -13,5 +13,8 @@ RSpec.describe 'Users', type: :request do
           end
       end
 
+      it "Check is the body includes correct text" do
+        expect(response.body).to include('Index')
+      end
 
 end
