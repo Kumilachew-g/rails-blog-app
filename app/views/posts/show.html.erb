@@ -1,2 +1,23 @@
-<h1>Posts Show Action</h1>
-<p>Here is a list of posts for a given user</p>
+<div class="users_wrapper">
+    <div class="users_index_main_container">
+      <div class="user_info">
+        <h1>Post by <%= @post.user.name %></h1>
+        <div class="user_info_posts_counter">
+          Comments:
+          <%= @post.comments_counter || 0 %>
+          , Likes:
+          <%= @post.likes_counter || 0 %>
+        </div>
+        <p class="post_text"><%= @post.text %></p>
+      </div>
+    </div>
+    <div class="comments_info_container"> 
+      <% @post.five_most_recent_comments.each_with_index do |comment, index| %>
+        <div class="comment_info">
+          <h4> <%= comment.user.name %>: </h4> 
+          &nbsp;&nbsp;
+          <p> <%= comment.text %> </p>
+        </div>
+      <% end %>
+    </div>
+</div>

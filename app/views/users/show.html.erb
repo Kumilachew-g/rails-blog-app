@@ -1,1 +1,36 @@
-<h2>This is show page</h2>
+<h1 class="users_show_header">Users Details</h1>
+<div class="users_wrapper">
+  <div class="users_show_main_container">
+    <%= image_tag("https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=455&q=80", class: "user_image_card") %>
+    <div class="user_info_container">
+      <h2> <%= @user.name %> </h2>
+      <div class="user_info__posts_counter">
+        Number of posts:
+        <%= @user.posts_counter || 0 %>
+      </div>
+    </div>
+  </div>
+  <div class="bio_container">
+    <h3>Bio</h3>
+    <p class="bio_info">
+      <%= @user.bio %>
+    </p>
+  </div>
+</div>
+
+<div class="users_wrapper">
+  <% @user.three_most_recent_posts.each_with_index do |post, index| %>
+    <a href="/users/<%= @user.id %>/posts" class="user_index_container">
+      <div class="user_info_container">
+        <h2>Post #<%= index+1 %></h2>
+        <p class="post_text"><%= post.text %></p>
+        <div class="user_info__posts_counter">
+          Comments:
+          <%= post.comments_counter || 0 %>
+          , Likes:
+          <%= post.likes_counter || 0 %>
+        </div>
+      </div>
+    </a>
+  <% end %>
+</div>
