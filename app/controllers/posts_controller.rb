@@ -13,4 +13,7 @@ class PostsController < ApplicationController
       format.html{render:new, locals:{post:@post}}
       end
     end
+
+  def create
+  end
 end
