@@ -26,6 +26,10 @@
         </div>
       </div>
     </a>
+
+    <%= form_with url: "/likes/#{post.id}", html: {class: "new_like"} do |form| %>
+      <%= form.submit "Like", class: "new_like_btn" %>
+    <% end %>
     <div class="comments_info"> 
       <% if post.five_most_recent_comments.length > 0 %>
         <% post.five_most_recent_comments.each do |comment| %>

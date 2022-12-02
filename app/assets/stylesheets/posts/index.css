@@ -54,3 +54,23 @@
 .comment_info {
   display: flex;
 }
+
+hr {
+  background-color: #000000;
+  width: 80%;
+}
+
+.new_like {
+  display: flex;
+  justify-content: flex-end;
+  width: 60vw;
+  padding: 0 5px 15px 0;
+}
+
+.new_like_btn {
+  background-color: red;
+  padding: 5px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
