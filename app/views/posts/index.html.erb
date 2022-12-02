@@ -9,14 +9,19 @@
         <%= @user.posts_counter || 0 %>
       </div>
     </div>
+    <div class="create_post_wrapper">
+    <a href="/posts/new" class="create_new_post_link">
+      Create New Post
+    </a>
+  </div>
   </div>
 </div>
 
 <div class="users_wrapper">
-  <% @user.three_most_recent_posts.each_with_index do |post, index| %>
+  <% @user.three_most_recent_posts.each do |post| %>
     <a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="user_index_container">
       <div class="user_info">
-        <h2>Post #<%= index+1 %></h2>
+        <h2><%= post.title %></h2>
         <p class="post_text"><%= post.text %></p>
         <div class="user_info__posts_counter">
           Comments:
@@ -26,14 +31,30 @@
         </div>
       </div>
     </a>
+
+    <%= form_with url: "/likes/#{post.id}", html: {class: "new_like"} do |form| %>
+      <%= form.submit "Like", class: "new_like_btn" %>
+    <% end %>
+
+    <%= form_with url: "/comments/#{post.id}", scope: :comment, html: {class: "new_comment"} do |form| %>
+      <%= form.text_area :text, placeholder: "Enter comment text", class: "form_comment" %>
+      <%= form.submit "Comment", class: "new_comment_btn" %>
+    <% end %>
     <div class="comments_info"> 
-      <% post.recent_comments.each_with_index do |comment, index| %>
-        <div class="comment_info_container">
-          <h4> <%= comment.user.name %>: </h4> 
-          &nbsp;&nbsp;
-          <p> <%= comment.text %> </p>
-        </div>
+      <% if post.five_most_recent_comments.length > 0 %>
+        <% post.five_most_recent_comments.each do |comment| %>
+          <div class="comment_info">
+            <h4> <%= comment.user.name %>: </h4> 
+            &nbsp;&nbsp;
+            <p> <%= comment.text %> </p>
+          </div>
+        <% end %>
+      <% else %>
+        <p> No comments exist yet </p>
       <% end %>
     </div>
+    <br>
+    <hr />
+    <br>
   <% end %>
 </div>
