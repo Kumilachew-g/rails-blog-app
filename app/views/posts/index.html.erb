@@ -30,6 +30,11 @@
     <%= form_with url: "/likes/#{post.id}", html: {class: "new_like"} do |form| %>
       <%= form.submit "Like", class: "new_like_btn" %>
     <% end %>
+
+    <%= form_with url: "/comments/#{post.id}", scope: :comment, html: {class: "new_comment"} do |form| %>
+      <%= form.text_area :text, placeholder: "Enter comment text", class: "form_comment" %>
+      <%= form.submit "Comment", class: "new_comment_btn" %>
+    <% end %>
     <div class="comments_info"> 
       <% if post.five_most_recent_comments.length > 0 %>
         <% post.five_most_recent_comments.each do |comment| %>
