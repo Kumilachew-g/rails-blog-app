@@ -9,14 +9,19 @@
         <%= @user.posts_counter || 0 %>
       </div>
     </div>
+    <div class="create_post_wrapper">
+    <a href="/posts/new" class="create_new_post_link">
+      Create New Post
+    </a>
+  </div>
   </div>
 </div>
 
 <div class="users_wrapper">
-  <% @user.three_most_recent_posts.each_with_index do |post, index| %>
+  <% @user.three_most_recent_posts.each do |post| %>
     <a href="/users/<%= @user.id %>/posts/<%= post.id %>" class="user_index_container">
       <div class="user_info">
-        <h2>Post #<%= index+1 %></h2>
+        <h2><%= post.title %></h2>
         <p class="post_text"><%= post.text %></p>
         <div class="user_info__posts_counter">
           Comments:

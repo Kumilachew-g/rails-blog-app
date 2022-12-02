@@ -80,7 +80,7 @@ hr {
   justify-content: flex-end;
   gap: 20px;
   width: 60vw;
-  padding: 0 5px 15px 5px;
+  padding: 17px 5px 15px 5px;
 }
 
 .new_comment_btn {
@@ -93,4 +93,20 @@ hr {
 
 .form_comment {
   flex-grow: 1;
+}
+
+.create_post_wrapper {
+  width: 60vw;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.create_new_post_link {
+  background-color: #047504;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
 }
