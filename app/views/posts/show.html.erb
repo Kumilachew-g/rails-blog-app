@@ -1,7 +1,7 @@
 <div class="users_wrapper">
     <div class="users_index_main_container">
       <div class="user_info">
-        <h1>Post by <%= @post.user.name %></h1>
+        <h1><%= @post.title %> by <%= @post.user.name %></h1>
         <div class="user_info_posts_counter">
           Comments:
           <%= @post.comments_counter || 0 %>
