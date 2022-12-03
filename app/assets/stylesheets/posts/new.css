@@ -1,6 +1,7 @@
 .form_container {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .new_post {
@@ -29,6 +30,9 @@
 }
 
 .submit_btn {
-  padding: 5px;
+  padding: 3px;
   font-size: 1.2rem;
+  background-color: #047504;
+  color: #ffffff;
+  border-radius: 4px;
 }
