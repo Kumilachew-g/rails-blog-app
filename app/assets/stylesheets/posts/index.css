@@ -110,3 +110,7 @@ hr {
   text-decoration: none;
   border-radius: 5px;
 }
+
+.create_new_post_link:hover {
+  color: #ffd700;
+}
