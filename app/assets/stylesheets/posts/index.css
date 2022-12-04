@@ -114,3 +114,7 @@ hr {
 .create_new_post_link:hover {
   color: #ffd700;
 }
+
+.comment_text {
+  font-size: 20px;
+}
