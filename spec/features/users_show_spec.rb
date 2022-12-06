@@ -4,7 +4,7 @@ RSpec.describe 'User show page', type: :feature do
   describe 'Show page for Hana' do
     before(:each) do
       @hana = User.create(name: 'Hana', photo: 'https://allaboutethio.com/images/ethiopian-traditional-clothes-habesha-kemise-7.jpg',
-                           bio: 'Teacher from DM')
+                          bio: 'Teacher from DM')
       @hello = Post.create(user: @hana, title: 'Hello', text: 'This is my first post')
       Post.create(user: @hana, title: 'Hey', text: 'This is my second post')
       Post.create(user: @hana, title: 'Hay', text: 'This is my third post')
@@ -44,19 +44,17 @@ RSpec.describe 'User show page', type: :feature do
       expect(page).to_not have_content('Hi')
     end
 
-
     it "When I click a user's post, it redirects me to that post's show page" do
       visit user_path(@hana)
       click_link 'Hello'
       expect(current_path).to eq user_post_path(@hana, @hello)
     end
-
   end
 
   describe 'Show page for Hewan' do
     before(:each) do
       @hewan = User.create(name: 'Hewan', photo: 'https://cdn.shopify.com/s/files/1/2447/6309/products/nyala-traditional-ethiopian-clothing-clothes-habesha-dress-white-green-lawn-lady-formal-wear_398/ethiopian-traditional-clothes-habesha-kemise-7.jpg',
-                          bio: 'Teacher from Addis Ababa')
+                           bio: 'Teacher from Addis Ababa')
       Post.create(user: @hewan, title: 'Hi one', text: "This is hewan's first post")
       Post.create(user: @hewan, title: 'Hi two', text: "This is hewan's second post")
       @hi_three = Post.create(user: @hewan, title: 'Hi three', text: "This is hewan's third post")

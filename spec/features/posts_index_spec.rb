@@ -4,13 +4,13 @@ RSpec.describe 'User post index page', type: :feature do
   describe 'Show page for Hana' do
     before(:each) do
       @hana = User.create(name: 'Hana', photo: 'https://cdn.shopify.com/s/files/1/2447/6309/products/E0A9186_2048x/ethiopian-clothe1.jpg?v=1622452326',
-                           bio: 'Teacher from Dejen')
+                          bio: 'Teacher from Dejen')
       @tana = User.create(name: 'Tana', photo: 'https://i0.wp.com/habeshakemise.com/wp-content/uploads/2019/06/amarech-ethiopian-traditional-dress-21-1/ethiopian-clothe2.jpg?fit=768%2C1018&ssl=1',
-                         bio: 'Teacher from DM.')
+                          bio: 'Teacher from DM.')
       @jemal = User.create(name: 'Jemal', photo: 'https://i0.wp.com/habeshakemise.com/wp-content/uploads/2019/06/fidel-fiker-ethiopian-traditional-clothes-87.jpg?fit=541%2C1024&ssl=1',
-                         bio: 'Teacher from Amber.')
+                           bio: 'Teacher from Amber.')
       @belete = User.create(name: 'Belete', photo: 'https://i.pinimg.com/originals/8e/b3/4c/8eb34cd010e03920a1aba259ac78a3ef.jpg',
-                          bio: 'Teacher from Dessie.')
+                            bio: 'Teacher from Dessie.')
       @hello = Post.create(user: @hana, title: 'Hello', text: 'This is my first post')
       Post.create(user: @hana, title: 'Hey', text: 'This is my second post')
       Comment.create(post: @hello, user: @tana, text: 'First comment')
