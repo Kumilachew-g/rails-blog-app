@@ -9,7 +9,7 @@ RSpec.describe User, type: :model do
     before { subject.save }
 
     it 'name presence' do
-      subject.name= nil
+      subject.name = nil
       expect(subject).to_not be_valid
     end
 
