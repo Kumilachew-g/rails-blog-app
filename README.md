@@ -134,13 +134,11 @@ To run the project, execute the following command:
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
 ```sh
-  bin/rails test test/models/article_test.rb
+  rspec spec/features
 ```
---->
+
+-
 
 ### Deployment
 
@@ -158,7 +156,7 @@ Example:
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="author"></a>
 
 <!-- > Mention all of the collaborators of this project. -->
 
