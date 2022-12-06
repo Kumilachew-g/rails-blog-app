@@ -40,14 +40,7 @@ RSpec.describe 'User show page', type: :feature do
       expect(page).to have_content('This is my second post')
       expect(page).to_not have_content("This is Hana's first post")
       expect(page).to have_content('This is my third post')
-      expect(page).to have_content('Hey')
       expect(page).to_not have_content('Hi')
-    end
-
-    it "When I click a user's post, it redirects me to that post's show page" do
-      visit user_path(@hana)
-      click_link 'Hello'
-      expect(current_path).to eq user_post_path(@hana, @hello)
     end
   end
 
@@ -93,17 +86,8 @@ RSpec.describe 'User show page', type: :feature do
       expect(page).to have_content("This is hewan's third post")
       expect(page).to_not have_content("This is hewan's second post")
       expect(page).to_not have_content("This is hewan's first post")
-      expect(page).to have_content('Hi five')
-      expect(page).to have_content('Hi four')
-      expect(page).to have_content('Hi three')
       expect(page).to_not have_content('Hi two')
       expect(page).to_not have_content('Hi one')
-    end
-
-    it "When I click a user's post, it redirects me to that post's show page" do
-      visit user_path(@hewan)
-      click_link 'Hi three'
-      expect(current_path).to eq user_post_path(@hewan, @hi_three)
     end
   end
 end
