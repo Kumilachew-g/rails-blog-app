@@ -21,6 +21,7 @@
 <div class="users_wrapper">
   <% @user.three_most_recent_posts.each_with_index do |post, index| %>
     <a href="/users/<%= @user.id %>/posts" class="user_index_container">
+    <%= link_to post.title, user_post_path(@user, post), class: "user_index_container" %>
       <div class="user_info_container">
         <h2>Post #<%= index+1 %></h2>
         <p class="post_text"><%= post.text %></p>
