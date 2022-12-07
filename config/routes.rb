@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'posts/new', to: 'posts#new'
   post 'posts', to: 'posts#create'
   post 'likes/:post_id', to: 'likes#create'
