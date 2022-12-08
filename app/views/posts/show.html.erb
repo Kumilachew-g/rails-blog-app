@@ -10,6 +10,7 @@
         </div>
         <p class="post_text"><%= @post.text %></p>
       </div>
+      <%= button_to "Delete", user_post_path, :method => :delete if can? :destroy, Post %>
     </div>
     <div class="comments_info_container"> 
       <% @post.five_most_recent_comments.each_with_index do |comment, index| %>
