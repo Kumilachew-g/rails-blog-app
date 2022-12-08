@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   post 'likes/:post_id', to: 'likes#create'
   post 'comments/:post_id', to: 'comments#create'
   resources :users, only: [:index, :show] do
-  resources :posts, on: :show, only: [:index, :show]
+  resources :posts, :show, only: [:index, :show, :new, :create, :destroy] do
+    resources :likes, only: [:create]
+    resources :comments, only: [:create, :new , :destroy]
+  end
   end
 
   root "users#index"
