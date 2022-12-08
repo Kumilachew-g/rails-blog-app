@@ -13,12 +13,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:comment_id])
+    @comment = Comment.find(params[:id])
     @post = Post.find(@comment.post_id)
-    @post.comments_counter -= 1
-    @comment.destroy!
-    @post.save
-    flash[:success] = 'You have deleted this comment successfully!'
-    redirect_to user_post_path(current_user.id, @comment.post_id)
+    @post.decrement!(:comments_counter)    
+    @comment.destroy
+    redirect_to root_path, status: :see_other
   end
 end
