@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @post = Post.find(@comment.post_id)
-    @post.decrement!(:comments_counter)    
+    @post.decrement!(:comments_counter)
     @comment.destroy
     redirect_to root_path, status: :see_other
   end
