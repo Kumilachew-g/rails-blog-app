@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  namespace :api do
+    post 'users/sign_in' => 'users#login'
+    get 'posts' => 'posts#index'
+    get 'comments' => 'comments#index'
+    post 'comments/create' => 'comments#create'
+  end
+
   get 'posts/new', to: 'posts#new'
   post 'posts', to: 'posts#create'
   post 'likes/:post_id', to: 'likes#create'
