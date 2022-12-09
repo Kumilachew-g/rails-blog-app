@@ -166,6 +166,12 @@ Example:
 - Twitter: [@twitterhandle](https://twitter.com/Getie_Haddis)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kumilachew-getie-0356bb157/)
 
+👤 **Omachi John**
+
+- GitHub: [@MrOmachi](https://github.com/MrOmachi)
+- Twitter: [@Mr_Omachi](https://twitter.com/Mr_Omachi)
+- LinkedIn: [John Omachi](https://www.linkedin.com/in/johnomachi/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
