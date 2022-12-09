@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     post 'comments/create' => 'comments#create'
   end
 
+  devise_scope :user do 
+    get '/users/sign_out' => 'devise/sessions#destroy' 
+  end
+
   get 'posts/new', to: 'posts#new'
   post 'posts', to: 'posts#create'
   post 'likes/:post_id', to: 'likes#create'
