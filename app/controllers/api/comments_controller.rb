@@ -38,7 +38,7 @@ class Api::CommentsController < ApplicationController
 
   def show
     if params[:comment_id]
- 
+
       @comment = Comment.find(params[:comment_id])
       respond_to do |format|
         format.json { render json: @comment, status: :ok }

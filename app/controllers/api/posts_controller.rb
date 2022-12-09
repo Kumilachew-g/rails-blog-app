@@ -12,6 +12,7 @@ class Api::PostsController < ApplicationController
       end
     end
   end
+
   def show
     if params[:post_id]
       @post = Post.find(params[:post_id])
