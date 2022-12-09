@@ -1,12 +1,21 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  namespace :api do
-    post 'users/sign_in' => 'users#login'
-    get 'posts' => 'posts#index'
-    get 'comments' => 'comments#index'
-    post 'comments/create' => 'comments#create'
-  end
+  # namespace :api do
+  #   post 'users/sign_in' => 'users#login'
+  #   get 'user/:id/posts' => 'posts#index'
+  #   get 'comments' => 'comments#index'
+  #   post 'comments/create' => 'comments#create'
+  # end
+
+  namespace :api, defaults: { format: :json } do
+    resources :users, only: %i[index show] do
+      resources :posts, only: %i[index show] do
+        resources :comments, only: %i[index show create]
+      end
+    end
+  
+end
 
   devise_scope :user do 
     get '/users/sign_out' => 'devise/sessions#destroy' 
