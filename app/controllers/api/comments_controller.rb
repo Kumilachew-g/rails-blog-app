@@ -8,7 +8,7 @@ class Api::CommentsController < ApplicationController
       end
     else
       respond_to do |format|
-        format.json { render json: 'please sign in or add the token'.to_json, status: :ok }
+        format.json { render json: 'please sign in or add the token to create comment'.to_json, status: :ok }
       end
     end
   end
